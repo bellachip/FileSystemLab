@@ -1,9 +1,9 @@
 CC=gcc
 CFLAGS="-Wall"
-
 debug:clean
-	$(CC) $(CFLAGS) -g -o filesystemTester test_main.h test_main.c test_util.c test_func.c test_test.c
+	$(CC) $(CFLAGS) -g -o test filesystems.h filesystems.c func.c builtins.c test.c
 stable:clean
-	$(CC) $(CFLAGS) -o filesystemTester test_main.h test_main.c test_util.c test_func.c test_test.c
+	$(CC) $(CFLAGS) -o test filesystems.h filesystems.c func.c builtins.c test.c
 clean:
-	rm -vfr *~ filesystemTester
+	rm -vfr *~ test
+
